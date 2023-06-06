@@ -1,0 +1,25 @@
+2023-06-04 18:02:26,966 INFO    MainThread:676651 [wandb_setup.py:_flush():76] Current SDK version is 0.15.3
+2023-06-04 18:02:26,966 INFO    MainThread:676651 [wandb_setup.py:_flush():76] Configure stats pid to 676651
+2023-06-04 18:02:26,967 INFO    MainThread:676651 [wandb_setup.py:_flush():76] Loading settings from /home/naveed/.config/wandb/settings
+2023-06-04 18:02:26,967 INFO    MainThread:676651 [wandb_setup.py:_flush():76] Loading settings from /home/naveed/projects/mlops/mlops-zoomcamp/cohorts/2023/02-experiment-tracking/homework-wandb/wandb/settings
+2023-06-04 18:02:26,967 INFO    MainThread:676651 [wandb_setup.py:_flush():76] Loading settings from environment variables: {}
+2023-06-04 18:02:26,967 INFO    MainThread:676651 [wandb_setup.py:_flush():76] Applying setup settings: {'_disable_service': False}
+2023-06-04 18:02:26,967 INFO    MainThread:676651 [wandb_setup.py:_flush():76] Inferring run settings from compute environment: {'program_relpath': 'cohorts/2023/02-experiment-tracking/homework-wandb/preprocess_data.py', 'program': '/home/naveed/projects/mlops/mlops-zoomcamp/cohorts/2023/02-experiment-tracking/homework-wandb/preprocess_data.py'}
+2023-06-04 18:02:26,967 INFO    MainThread:676651 [wandb_setup.py:_flush():76] Applying login settings: {'mode': 'offline'}
+2023-06-04 18:02:26,967 INFO    MainThread:676651 [wandb_init.py:_log_setup():507] Logging user logs to /home/naveed/projects/mlops/mlops-zoomcamp/cohorts/2023/02-experiment-tracking/homework-wandb/wandb/offline-run-20230604_180226-gwjj2puh/logs/debug.log
+2023-06-04 18:02:26,967 INFO    MainThread:676651 [wandb_init.py:_log_setup():508] Logging internal logs to /home/naveed/projects/mlops/mlops-zoomcamp/cohorts/2023/02-experiment-tracking/homework-wandb/wandb/offline-run-20230604_180226-gwjj2puh/logs/debug-internal.log
+2023-06-04 18:02:26,967 INFO    MainThread:676651 [wandb_init.py:init():547] calling init triggers
+2023-06-04 18:02:26,967 INFO    MainThread:676651 [wandb_init.py:init():554] wandb.init called with sweep_config: {}
+config: {}
+2023-06-04 18:02:26,967 INFO    MainThread:676651 [wandb_init.py:init():596] starting backend
+2023-06-04 18:02:26,967 INFO    MainThread:676651 [wandb_init.py:init():600] setting up manager
+2023-06-04 18:02:26,969 INFO    MainThread:676651 [backend.py:_multiprocessing_setup():106] multiprocessing start_methods=fork,spawn,forkserver, using: spawn
+2023-06-04 18:02:26,971 INFO    MainThread:676651 [wandb_init.py:init():606] backend started and connected
+2023-06-04 18:02:26,973 INFO    MainThread:676651 [wandb_init.py:init():700] updated telemetry
+2023-06-04 18:02:26,976 INFO    MainThread:676651 [wandb_init.py:init():787] starting run threads in backend
+2023-06-04 18:02:28,072 INFO    MainThread:676651 [wandb_run.py:_console_start():2158] atexit reg
+2023-06-04 18:02:28,073 INFO    MainThread:676651 [wandb_run.py:_redirect():2013] redirect: 3
+2023-06-04 18:02:28,073 INFO    MainThread:676651 [wandb_run.py:_redirect():2078] Wrapping output streams.
+2023-06-04 18:02:28,073 INFO    MainThread:676651 [wandb_run.py:_redirect():2103] Redirects installed.
+2023-06-04 18:02:28,073 INFO    MainThread:676651 [wandb_init.py:init():829] run started, returning control to user process
+2023-06-04 18:02:29,833 WARNING MsgRouterThr:676651 [router.py:message_loop():77] message_loop has been closed

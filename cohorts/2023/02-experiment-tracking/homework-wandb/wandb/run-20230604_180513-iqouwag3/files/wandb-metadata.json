@@ -1,0 +1,86 @@
+{
+    "os": "Linux-5.15.0-72-generic-x86_64-with-glibc2.35",
+    "python": "3.11.3",
+    "heartbeatAt": "2023-06-05T01:05:13.871314",
+    "startedAt": "2023-06-05T01:05:13.315073",
+    "docker": null,
+    "cuda": null,
+    "args": [
+        "--wandb_project",
+        "zoomcamp1",
+        "--wandb_entity",
+        "naveed11",
+        "--raw_data_path",
+        "/home/naveed/projects/mlops/mlops-zoomcamp/cohorts/2023/02-experiment-tracking/homework-wandb",
+        "--dest_path",
+        "./output"
+    ],
+    "state": "running",
+    "program": "/home/naveed/projects/mlops/mlops-zoomcamp/cohorts/2023/02-experiment-tracking/homework-wandb/preprocess_data.py",
+    "codePath": "cohorts/2023/02-experiment-tracking/homework-wandb/preprocess_data.py",
+    "git": {
+        "remote": "git@github.com:naveeda11/mlops-zoomcamp-personal",
+        "commit": "3cf1bd022d2f65269fd9ad5ed75a0b660b87d6c3"
+    },
+    "email": "naveed.agboatwala11@gmail.com",
+    "root": "/home/naveed/projects/mlops/mlops-zoomcamp",
+    "host": "nlinux1",
+    "username": "naveed",
+    "executable": "/home/naveed/anaconda3/envs/wandb/bin/python",
+    "cpu_count": 8,
+    "cpu_count_logical": 8,
+    "cpu_freq": {
+        "current": 3250.00225,
+        "min": 800.0,
+        "max": 4900.0
+    },
+    "cpu_freq_per_core": [
+        {
+            "current": 800.005,
+            "min": 800.0,
+            "max": 4900.0
+        },
+        {
+            "current": 3600.0,
+            "min": 800.0,
+            "max": 4900.0
+        },
+        {
+            "current": 3600.0,
+            "min": 800.0,
+            "max": 4900.0
+        },
+        {
+            "current": 3600.0,
+            "min": 800.0,
+            "max": 4900.0
+        },
+        {
+            "current": 3600.0,
+            "min": 800.0,
+            "max": 4900.0
+        },
+        {
+            "current": 800.076,
+            "min": 800.0,
+            "max": 4900.0
+        },
+        {
+            "current": 3600.0,
+            "min": 800.0,
+            "max": 4900.0
+        },
+        {
+            "current": 3600.0,
+            "min": 800.0,
+            "max": 4900.0
+        }
+    ],
+    "disk": {
+        "total": 456.8854446411133,
+        "used": 354.8295249938965
+    },
+    "memory": {
+        "total": 46.97589111328125
+    }
+}
