@@ -44,7 +44,7 @@ def read_data(filename: str) -> pd.DataFrame:
 
     categorical = ["PULocationID", "DOLocationID"]
     df[categorical] = df[categorical].astype(str)
-    example_email_send_message_flow("naveedagboatwala11@gmail.com")
+
     return df
 
 
@@ -150,6 +150,8 @@ def main_flow(
 
     # Train
     train_best_model(X_train, X_val, y_train, y_val, dv)
+
+    example_email_send_message_flow("naveedagboatwala11@gmail.com")
 
 
 if __name__ == "__main__":
