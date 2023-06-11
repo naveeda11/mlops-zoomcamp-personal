@@ -11,6 +11,22 @@ import xgboost as xgb
 from prefect import flow, task
 from prefect.artifacts import create_markdown_artifact
 from datetime import date
+from prefect_email import EmailServerCredentials, email_send_message
+
+
+@flow
+def example_email_send_message_flow(email_addresses: List[str]):
+    email_server_credentials = EmailServerCredentials.load("BLOCK-NAME-PLACEHOLDER")
+    for email_address in email_addresses:
+        subject = email_send_message.with_options(name=f"email {email_address}").submit(
+            email_server_credentials=email_server_credentials,
+            subject="Example Flow Notification using Gmail",
+            msg="This proves email_send_message works!",
+            email_to=email_address,
+        )
+
+
+example_email_send_message_flow(["EMAIL-ADDRESS-PLACEHOLDER"])
 
 
 @task(retries=3, retry_delay_seconds=2, name="read_data")
@@ -28,7 +44,7 @@ def read_data(filename: str) -> pd.DataFrame:
 
     categorical = ["PULocationID", "DOLocationID"]
     df[categorical] = df[categorical].astype(str)
-
+    example_email_send_message_flow("naveedagboatwala11@gmail.com")
     return df
 
 
@@ -110,6 +126,7 @@ def train_best_model(
 
         mlflow.xgboost.log_model(booster, artifact_path="models_mlflow")
         create_markdown_artifact(key="rmse-report", markdown=rmse_report)
+        email_credentials_block = EmailServerCredentials.load("gmail")
     return None
 
 
