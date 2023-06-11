@@ -14,7 +14,6 @@ from datetime import date
 from prefect_email import EmailServerCredentials, email_send_message
 
 
-@task
 def example_email_send_message_flow(email_addresses: list[str]):
     email_server_credentials = EmailServerCredentials.load("gmail")
     for email_address in email_addresses:
