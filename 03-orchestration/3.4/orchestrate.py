@@ -147,7 +147,7 @@ def main_flow(
     # Train
     train_best_model(X_train, X_val, y_train, y_val, dv)
     # email_credentials_block = EmailServerCredentials.load("gmail")
-    example_email_send_message_flow("naveedagboatwala11@gmail.com")
+    example_email_send_message_flow(["naveedagboatwala11@gmail.com"])
 
 
 if __name__ == "__main__":
