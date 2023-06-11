@@ -16,7 +16,7 @@ from prefect_email import EmailServerCredentials, email_send_message
 
 @task
 def example_email_send_message_flow(email_addresses: list[str]):
-    email_server_credentials = EmailServerCredentials.load("BLOCK-NAME-PLACEHOLDER")
+    email_server_credentials = EmailServerCredentials.load("gmail")
     for email_address in email_addresses:
         subject = email_send_message.with_options(name=f"email {email_address}").submit(
             email_server_credentials=email_server_credentials,
@@ -24,9 +24,6 @@ def example_email_send_message_flow(email_addresses: list[str]):
             msg="This proves email_send_message works!",
             email_to=email_address,
         )
-
-
-example_email_send_message_flow(["EMAIL-ADDRESS-PLACEHOLDER"])
 
 
 @task(retries=3, retry_delay_seconds=2, name="read_data")
@@ -126,7 +123,7 @@ def train_best_model(
 
         mlflow.xgboost.log_model(booster, artifact_path="models_mlflow")
         create_markdown_artifact(key="rmse-report", markdown=rmse_report)
-        email_credentials_block = EmailServerCredentials.load("gmail")
+
     return None
 
 
@@ -150,7 +147,7 @@ def main_flow(
 
     # Train
     train_best_model(X_train, X_val, y_train, y_val, dv)
-
+    # email_credentials_block = EmailServerCredentials.load("gmail")
     example_email_send_message_flow("naveedagboatwala11@gmail.com")
 
 
