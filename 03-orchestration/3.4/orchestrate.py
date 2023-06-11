@@ -15,7 +15,7 @@ from prefect_email import EmailServerCredentials, email_send_message
 
 
 @flow
-def example_email_send_message_flow(email_addresses: List[str]):
+def example_email_send_message_flow(email_addresses: list[str]):
     email_server_credentials = EmailServerCredentials.load("BLOCK-NAME-PLACEHOLDER")
     for email_address in email_addresses:
         subject = email_send_message.with_options(name=f"email {email_address}").submit(
